@@ -1,11 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
-import Header from './src/components/header';
+import { Text, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 export default class App extends React.Component {
   render() {
     return (
-        <Header />
+      <View>  
+        <Header headerText={'Albums'} />
+        <AlbumList />
+      </View>
     );
   }
 }
