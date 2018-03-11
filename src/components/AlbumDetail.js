@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
 import Button from './Button';
@@ -9,7 +9,7 @@ import Button from './Button';
 
 //(props) is receiving the props being passed down
 const AlbumDetail = ({ album }) => {
-    const { title, artist, thumbnail_image, image} = album;
+    const { title, artist, thumbnail_image, image, url} = album;
     const { 
         thumbnailStyle, 
         headerContentStyle, 
@@ -40,7 +40,9 @@ const AlbumDetail = ({ album }) => {
             </CardItem>
 
             <CardItem>
-                <Button onPress={() => console.log(title)}/>
+                <Button onPress={() => Linking.openURL(url)}>
+                    Buy Now
+                </Button>
             </CardItem>
         </Card>
        
