@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
+import Button from './Button';
 
 //will just show data to user
 //presentational component
@@ -16,7 +17,7 @@ const AlbumDetail = ({ album }) => {
         headerTextStyle, 
         imageStyle 
     } = styles;
-    
+
     return (
         <Card>
             <CardItem>
@@ -31,10 +32,15 @@ const AlbumDetail = ({ album }) => {
                     <Text>{artist}</Text>
                 </View>
             </CardItem>
+            
             <CardItem>
                 <Image
                 style={imageStyle} 
                 source={{ uri: image }}/>
+            </CardItem>
+
+            <CardItem>
+                <Button />
             </CardItem>
         </Card>
        
