@@ -9,7 +9,14 @@ import CardItem from './CardItem';
 //(props) is receiving the props being passed down
 const AlbumDetail = ({ album }) => {
     const { title, artist, thumbnail_image, image} = album;
-    const { thumbnailStyle, headerContentStyle, thumbnailContainerStyle, headerTextStyle, imageStyle } = styles;
+    const { 
+        thumbnailStyle, 
+        headerContentStyle, 
+        thumbnailContainerStyle, 
+        headerTextStyle, 
+        imageStyle 
+    } = styles;
+    
     return (
         <Card>
             <CardItem>
