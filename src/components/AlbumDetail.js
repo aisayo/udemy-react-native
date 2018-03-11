@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
+import CardItem from './CardItem';
 
 //will just show data to user
 //presentational component
@@ -7,9 +9,11 @@ import { View, Text } from 'react-native';
 //(props) is receiving the props being passed down
 const AlbumDetail = (props) => {
     return (
-        <View>
-            <Text>{props.album.title}</Text>
-        </View>
+        <Card>
+            <CardItem>
+                <Text>{props.album.title}</Text>
+            </CardItem>
+        </Card>
        
     );
 };
