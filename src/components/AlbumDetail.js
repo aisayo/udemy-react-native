@@ -32,7 +32,7 @@ const AlbumDetail = ({ album }) => {
                     <Text>{artist}</Text>
                 </View>
             </CardItem>
-            
+
             <CardItem>
                 <Image
                 style={imageStyle} 
@@ -40,7 +40,7 @@ const AlbumDetail = ({ album }) => {
             </CardItem>
 
             <CardItem>
-                <Button />
+                <Button onPress={() => console.log(title)}/>
             </CardItem>
         </Card>
        
